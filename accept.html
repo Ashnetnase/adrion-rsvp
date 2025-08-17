@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adrion Atelier — RSVP Accepted</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#fff;color:#111}
+    .wrap{max-width:520px;margin:40px auto;padding:0 20px}
+    label{display:block;margin:10px 0 6px}
+    input{width:100%;padding:12px;border:1px solid #ddd;border-radius:6px}
+    .btn{display:inline-block;margin-top:14px;padding:14px 22px;border-radius:8px;background:#000;color:#fff;text-decoration:none;border:0;cursor:pointer;font-weight:700}
+    .small{color:#666;font-size:13px;margin-top:10px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Confirm — Accept Invitation</h1>
+    <p>Please confirm your details so we can secure your RSVP.</p>
+    <form method="POST" action="https://formspree.io/f/xrblvprg">
+      <input type="hidden" name="RSVP_Status" value="Accepted" />
+      <input type="hidden" name="RSVP_Event" value="[EVENT CODE]" />
+      <label for="name">Full name</label>
+      <input id="name" type="text" name="name" required />
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required />
+      <button class="btn" type="submit">Confirm RSVP</button>
+      <input type="text" name="_gotcha" style="display:none" />
+      <input type="hidden" name="_redirect" value="./thankyou.html">
+      <input type="hidden" name="_subject" value="RSVP ACCEPTED — Adrion Atelier">
+    </form>
+    <p class="small">We’ll email a confirmation to you right away.</p>
+  </div>
+</body>
+</html>
