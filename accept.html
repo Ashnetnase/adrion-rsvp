@@ -1,35 +1,45 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Adrion Atelier — RSVP Accepted</title>
-  <style>
-    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#fff;color:#111}
-    .wrap{max-width:520px;margin:40px auto;padding:0 20px}
-    label{display:block;margin:10px 0 6px}
-    input{width:100%;padding:12px;border:1px solid #ddd;border-radius:6px}
-    .btn{display:inline-block;margin-top:14px;padding:14px 22px;border-radius:8px;background:#000;color:#fff;text-decoration:none;border:0;cursor:pointer;font-weight:700}
-    .small{color:#666;font-size:13px;margin-top:10px}
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <h1>Confirm — Accept Invitation</h1>
-    <p>Please confirm your details so we can secure your RSVP.</p>
-    <form method="POST" action="https://formspree.io/f/xrblvprg">
-      <input type="hidden" name="RSVP_Status" value="Accepted" />
-      <input type="hidden" name="RSVP_Event" value="[EVENT CODE]" />
-      <label for="name">Full name</label>
-      <input id="name" type="text" name="name" required />
-      <label for="email">Email</label>
-      <input id="email" type="email" name="email" required />
-      <button class="btn" type="submit">Confirm RSVP</button>
-      <input type="text" name="_gotcha" style="display:none" />
-      <input type="hidden" name="_redirect" value="./thankyou.html">
-      <input type="hidden" name="_subject" value="RSVP ACCEPTED — Adrion Atelier">
-    </form>
-    <p class="small">We’ll email a confirmation to you right away.</p>
-  </div>
-</body>
+  <body style="margin:0;padding:0;background:#ffffff;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;">
+      <tr><td align="center" style="padding:24px;">
+        <table width="640" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:14px;overflow:hidden;border:1px solid #e9e9e9;">
+          <tr>
+            <td align="center" style="padding:26px 0 0;">
+              <img src="data:image/webp;base64,UklGRhwIAABXRUJQVlA4WAoAAAA4AAAAYwAAKgAASUNDUKgBAAAAAAGobGNtcwIQAABtbnRyUkdCIFhZWiAH4gAHAAEAAQABAAEAAAABAAEAAAEACAAqYWNzcEFQUEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAA/////wAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYWVogAAAAAABMzU8AABQTAAAAAAB9YXBwbAIQAAABWFlaIAAAAAAAAFpZAAADCgAAABRzZnQAAAAAAAAAAQAAAGJrcHQAAAAAAAAAAQAAAHJYWVoAAAAAAAABAAABAAAAAABiWFlaAAAAAAAAXR0AAABqAAAAFGNwcnQAAABaAAAAH2Rlc2MAAAAAAAAAAFdlYnAgbG9nbyBmb3IgQWRyaW9uIEF0ZWxpZXIAWFlaIAAAAAAAAGK6AAABoAAAABRlc24gAAAAAAEAAAByR1JQAAAAAAABAAAAAQAAAG1sdWMAAAAAAAABAAAAAQAAAABjaHJtAAAAAAABAAAAAQAAAAJ0ZXh0AAAAAAABAAAAAQAAAFZQOFgQAAAAGAAAADgAAABjAAAKAAABAAAAAAEAAQAA" alt="Adrion Atelier" width="200" style="display:block;width:200px;max-width:80%;height:auto;margin:0 auto;" />
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:28px 32px 12px;font-family:Arial,Helvetica,sans-serif;color:#111111;">
+              <h1 style="margin:0 0 10px;font-size:24px;line-height:1.3;font-weight:600;">You’re confirmed — Adrion Atelier</h1>
+              <p style="margin:0 0 14px;font-size:14px;line-height:1.7;color:#444444;">
+                Hi {{ first_name|default:'there' }}, thanks for your RSVP. We’re delighted to host you.
+              </p>
+              <table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;margin:6px 0 14px;font-size:14px;color:#111111;">
+                <tr><td style="padding:8px 0;border-bottom:1px solid #e9e9e9;"><strong>Date</strong></td><td style="padding:8px 0;border-bottom:1px solid #e9e9e9;">Wednesday, 27 August 2025</td></tr>
+                <tr><td style="padding:8px 0;border-bottom:1px solid #e9e9e9;"><strong>VIP Lounge</strong></td><td style="padding:8px 0;border-bottom:1px solid #e9e9e9;">Opens 11:00am</td></tr>
+                <tr><td style="padding:8px 0;border-bottom:1px solid #e9e9e9;"><strong>Show</strong></td><td style="padding:8px 0;border-bottom:1px solid #e9e9e9;">1:00pm</td></tr>
+                <tr><td style="padding:8px 0;border-bottom:1px solid #e9e9e9;"><strong>Venue</strong></td><td style="padding:8px 0;border-bottom:1px solid #e9e9e9;">Shed 10, Queens Wharf, Auckland CBD</td></tr>
+                <tr><td style="padding:8px 0;border-bottom:1px solid #e9e9e9;"><strong>Guests</strong></td><td style="padding:8px 0;border-bottom:1px solid #e9e9e9;">{{ person|lookup:'guest_count'|default:'0' }}</td></tr>
+              </table>
+              <p style="margin:0 0 14px;font-size:14px;color:#444444;">
+                Add it to your calendar: <a href="https://adrionatelier.com/adrion-nzfw25.ics" style="color:#111111;text-decoration:underline;">Download .ics</a>
+              </p>
+              <p style="margin:0 0 14px;font-size:14px;color:#444444;">
+                Dress code: contemporary, chic. Please arrive 15 minutes early. For assistance, reply to this email.
+              </p>
+              <hr style="border:none;border-top:1px solid #e9e9e9;margin:16px 0;">
+              <p style="margin:0 0 6px;font-size:12px;color:#777777;">RSVP email: {{ person.email }}</p>
+              <p style="margin:0 0 6px;font-size:12px;color:#777777;">Notes: {{ person|lookup:'notes'|default:'—' }}</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:18px 24px 32px;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#8c8c8c;text-align:center;">
+              © Adrion Atelier — All rights reserved.
+            </td>
+          </tr>
+        </table>
+      </td></tr>
+    </table>
+  </body>
 </html>
