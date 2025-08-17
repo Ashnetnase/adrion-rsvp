@@ -1,36 +1,121 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Adrion Atelier — RSVP</title>
-  <style>
-    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#fff;color:#111}
-    .wrap{max-width:720px;margin:40px auto;padding:0 20px}
-    h1{font-size:28px;margin:0 0 10px}
-    p{line-height:1.6}
-    .btn{display:inline-block;padding:14px 22px;border-radius:8px;text-decoration:none;font-weight:700;margin:10px 10px 0 0}
-    .accept{background:#000;color:#fff}
-    .decline{background:#C5A880;color:#111}
-    .muted{color:#666;font-size:14px;margin-top:24px}
-  
+  <meta name="description" content="RSVP to the Adrion Atelier presentation at NZFW25." />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;        /* page background */
+      --fg:#111111;        /* main text */
+      --muted:#666666;     /* secondary text */
+      --accent:#d6c8a4;    /* subtle gold accent (tweak to brand) */
+      --card:#ffffff;      /* card background */
+      --border:#e9e9e9;    /* light borders */
+      --shadow:0 8px 24px rgba(0,0,0,.06);
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg)}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    h1,h2,h3{font-family:"Playfair Display",Georgia,serif;margin:0 0 8px;line-height:1.2}
+
+    a{color:var(--fg)}
+    .container{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+
+    .hero{display:grid;place-items:center;padding:32px 0 12px}
+    .logo{width:220px;height:auto}
+
+    .card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    @media (min-width:720px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+
+    .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+    .title{font-size:clamp(26px,3.4vw,40px);margin-bottom:10px}
+    .sub{color:var(--muted);font-size:14px}
+
+    .details{display:grid;grid-template-columns:1fr;gap:12px}
+    .detail{padding:12px 0;border-bottom:1px solid var(--border)}
+    .detail:last-child{border-bottom:none}
+    .detail strong{display:inline-block;min-width:120px;font-weight:600}
+
+    .rsvp-card{background:linear-gradient(180deg, rgba(214,200,164,.10), rgba(214,200,164,0) 80%)}
+    .kicker{font-size:14px;color:var(--muted)}
+    .klaviyo-wrap{margin-top:12px}
+    .help{font-size:12px;color:var(--muted);margin-top:10px}
+
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .cta{display:inline-block;border:1px solid var(--border);border-radius:12px;padding:10px 14px;text-decoration:none}
+    .cta:hover{box-shadow:0 6px 18px rgba(0,0,0,.05)}
+
+    footer{margin-top:36px;font-size:12px;color:#888;text-align:center}
   </style>
 </head>
-    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/XgQVR2/klaviyo.js?company_id=XgQVR2"></script>
 <body>
-  <div class="wrap">
-    <p style="text-align:right;margin:0 0 8px 0;">Adrion Atelier</p>
-    <h1>You’re invited to [EVENT NAME]</h1>
-    <p>Date: <strong>[Event Date]</strong><br>Time: <strong>[Event Time]</strong><br>Location: <strong>[Venue, City]</strong></p>
-    <p>Please RSVP below:</p>
+  <!-- Klaviyo loader (your Site ID appears twice and must match) -->
+  <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/XgQVR2/klaviyo.js?company_id=XgQVR2"></script>
 
-    <a class="btn accept" href="./accept.html">✅ Accept Invitation</a>
-    <a class="btn decline" href="./decline.html">❌ Regretfully Decline</a>
+  <div class="container">
+    <header class="hero">
+      <!-- Replace LOGO_URL with your actual logo file path if needed -->
+      <img src="LOGO_URL" alt="Adrion Atelier" class="logo" />
+    </header>
 
-    <div class="klaviyo-form-VLEGvx"></div>
+    <section class="card">
+      <div class="eyebrow">Invitation</div>
+      <h1 class="title">Adrion Atelier — NZFW25 Runway</h1>
+      <p class="sub">Experience sculptural form, rich textures, and quiet drama — an expression of intentional design and refined craftsmanship.</p>
 
-    <p class="muted">If buttons don’t work, email us at events@adrionatelier.com.</p>
+      <div class="grid cols-2" style="margin-top:16px;">
+        <div class="details">
+          <div class="detail"><strong>Date</strong> Wednesday, 27 August 2025</div>
+          <div class="detail"><strong>VIP Lounge</strong> Opens 11:00am</div>
+          <div class="detail"><strong>Show</strong> 1:00pm</div>
+          <div class="detail"><strong>Venue</strong> Shed 10, Queens Wharf, Auckland CBD</div>
+          <div class="detail"><strong>Dress</strong> Contemporary, chic</div>
+        </div>
+
+        <div class="card rsvp-card">
+          <div class="eyebrow">RSVP</div>
+          <h2 style="font-size:22px;margin-bottom:6px;">Confirm your attendance</h2>
+          <p class="kicker">Please RSVP by 15 August. You’ll receive an instant confirmation email.</p>
+
+          <div class="klaviyo-wrap">
+            <!-- Your Klaviyo Embed form renders here -->
+            <div class="klaviyo-form-VLEGvx"></div>
+            <noscript><p class="help">JavaScript is required to RSVP. Please email <a href="mailto:events@adrionatelier.com">events@adrionatelier.com</a>.</p></noscript>
+            <div id="klaviyo-fallback" class="help" style="display:none;">
+              If the form doesn’t load, whitelist <code>static.klaviyo.com</code> and <code>a.klaviyo.com</code> (ad-blockers/Pi-hole) and refresh.
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="cta" href="/adrion-nzfw25.ics">Add to calendar (.ics)</a>
+            <a class="cta" href="https://adrionatelier.com" target="_blank" rel="noopener">AdrionAtelier.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>© Adrion Atelier — All rights reserved.</footer>
   </div>
+
+  <script>
+    // Show a helper message if the Klaviyo form didn't render (likely blocked)
+    window.addEventListener('load', function () {
+      setTimeout(function(){
+        var mount = document.querySelector('.klaviyo-form-VLEGvx');
+        var tip = document.getElementById('klaviyo-fallback');
+        if (mount && mount.childElementCount === 0 && tip) tip.style.display = 'block';
+      }, 1500);
+    });
+  </script>
 </body>
 </html>
